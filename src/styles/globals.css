@@ -43,7 +43,8 @@
 
 @layer components {
   .glass-header {
-    background:
+    background-color: rgba(10, 24, 40, 0.92);
+    background-image:
       linear-gradient(180deg, rgba(16, 34, 54, 0.84), rgba(11, 28, 45, 0.76)),
       linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.06));
     border: 1px solid rgba(255, 255, 255, 0.16);
@@ -81,7 +82,8 @@
   }
 
   .glass-mobile-tab {
-    background:
+    background-color: rgba(38, 67, 112, 0.92);
+    background-image:
       linear-gradient(180deg, rgba(119, 161, 244, 0.44), rgba(76, 116, 194, 0.36)),
       linear-gradient(145deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.08));
     border: 1px solid rgba(255, 255, 255, 0.28);
@@ -101,6 +103,16 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+  }
+
+  @supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+    .glass-header {
+      background-color: rgba(10, 24, 40, 0.52);
+    }
+
+    .glass-mobile-tab {
+      background-color: rgba(38, 67, 112, 0.46);
+    }
   }
 
   @supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
