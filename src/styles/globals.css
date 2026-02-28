@@ -107,11 +107,17 @@
     position: fixed;
     inset: 0;
     z-index: 200;
-    display: grid;
-    place-items: center;
+    overflow: hidden;
     background:
       radial-gradient(circle at 50% 40%, rgba(45, 82, 142, 0.26), transparent 52%),
       linear-gradient(180deg, #06172a 0%, #0b1c2d 100%);
+  }
+
+  .splash-logo-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .splash-logo-wrap {
@@ -139,5 +145,89 @@
     object-fit: cover;
     object-position: center;
     border-radius: 9999px;
+  }
+
+  .splash-loader-bottom {
+    position: absolute;
+    left: 50%;
+    bottom: clamp(24px, 6vh, 48px);
+    transform: translateX(-50%);
+  }
+
+  .apple-spinner {
+    position: relative;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+  }
+
+  .apple-spinner-bar {
+    position: absolute;
+    top: 1px;
+    left: 10px;
+    width: 2px;
+    height: 6px;
+    border-radius: 9999px;
+    background: #ffffff;
+    transform-origin: center 10px;
+    animation: apple-spinner-fade 1s linear infinite;
+  }
+
+  .apple-spinner-bar:nth-child(1) {
+    transform: rotate(0deg) translateY(0);
+    animation-delay: -0.9167s;
+  }
+  .apple-spinner-bar:nth-child(2) {
+    transform: rotate(30deg) translateY(0);
+    animation-delay: -0.8333s;
+  }
+  .apple-spinner-bar:nth-child(3) {
+    transform: rotate(60deg) translateY(0);
+    animation-delay: -0.75s;
+  }
+  .apple-spinner-bar:nth-child(4) {
+    transform: rotate(90deg) translateY(0);
+    animation-delay: -0.6667s;
+  }
+  .apple-spinner-bar:nth-child(5) {
+    transform: rotate(120deg) translateY(0);
+    animation-delay: -0.5833s;
+  }
+  .apple-spinner-bar:nth-child(6) {
+    transform: rotate(150deg) translateY(0);
+    animation-delay: -0.5s;
+  }
+  .apple-spinner-bar:nth-child(7) {
+    transform: rotate(180deg) translateY(0);
+    animation-delay: -0.4167s;
+  }
+  .apple-spinner-bar:nth-child(8) {
+    transform: rotate(210deg) translateY(0);
+    animation-delay: -0.3333s;
+  }
+  .apple-spinner-bar:nth-child(9) {
+    transform: rotate(240deg) translateY(0);
+    animation-delay: -0.25s;
+  }
+  .apple-spinner-bar:nth-child(10) {
+    transform: rotate(270deg) translateY(0);
+    animation-delay: -0.1667s;
+  }
+  .apple-spinner-bar:nth-child(11) {
+    transform: rotate(300deg) translateY(0);
+    animation-delay: -0.0833s;
+  }
+  .apple-spinner-bar:nth-child(12) {
+    transform: rotate(330deg) translateY(0);
+    animation-delay: 0s;
+  }
+
+  @keyframes apple-spinner-fade {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.15;
+    }
   }
 }

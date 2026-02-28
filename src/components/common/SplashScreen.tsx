@@ -14,14 +14,32 @@ function SplashScreen({ isVisible }: SplashScreenProps) {
       className="splash-screen"
       aria-hidden={!isVisible}
     >
-      <motion.div
-        initial={{ opacity: 0.65, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, ease: 'easeOut' }}
-        className="splash-logo-wrap"
-      >
-        <img src={logoImage} alt="Nazirov Holding logo" className="splash-logo-image" />
-      </motion.div>
+      <div className="splash-logo-center">
+        <motion.div
+          initial={{ opacity: 0.65, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+          className="splash-logo-wrap"
+        >
+          <img src={logoImage} alt="Nazirov Holding logo" className="splash-logo-image" />
+        </motion.div>
+      </div>
+      <span className="splash-loader-bottom" aria-hidden="true">
+        <span className="apple-spinner">
+          <span className="apple-spinner-bar" />
+          <span className="apple-spinner-bar" />
+          <span className="apple-spinner-bar" />
+          <span className="apple-spinner-bar" />
+          <span className="apple-spinner-bar" />
+          <span className="apple-spinner-bar" />
+          <span className="apple-spinner-bar" />
+          <span className="apple-spinner-bar" />
+          <span className="apple-spinner-bar" />
+          <span className="apple-spinner-bar" />
+          <span className="apple-spinner-bar" />
+          <span className="apple-spinner-bar" />
+        </span>
+      </span>
     </motion.div>
   )
 }
