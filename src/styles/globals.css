@@ -103,6 +103,8 @@
     -moz-appearance: none;
   }
 
+/* Splash Screen */
+
   .splash-screen {
     position: fixed;
     inset: 0;
