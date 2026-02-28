@@ -163,10 +163,10 @@ function Navbar() {
       >
         <Container
           className={[
-            'flex h-[72px] items-center justify-between gap-4 rounded-2xl px-5 transition-[background-color,backdrop-filter,box-shadow,border-color,transform] duration-300',
+            'glass-header flex h-[72px] items-center justify-between gap-4 rounded-2xl px-5 transition-[background-color,backdrop-filter,box-shadow,border-color,transform,opacity] duration-300',
             isScrolled
-              ? 'glass-header translate-y-0'
-              : 'border border-white/10 bg-[#0f2742]/40 shadow-[0_8px_22px_rgba(2,10,24,0.26)] backdrop-blur-[10px]',
+              ? 'translate-y-0 opacity-100'
+              : 'opacity-95',
           ].join(' ')}
         >
           <a href="#home" className="flex shrink-0 items-center gap-3 text-white">
