@@ -48,7 +48,7 @@ function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-[#0B1C2D]/95 via-[#0B1C2D]/75 to-[#0B1C2D]/95" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_15%,rgba(138,176,255,0.26),transparent_46%),radial-gradient(circle_at_80%_85%,rgba(87,129,235,0.2),transparent_48%)]" />
-      <Container className="relative z-10 flex min-h-screen items-start pt-40 sm:pt-24">
+      <Container className="relative z-10 flex min-h-screen items-start pt-[calc(8rem+env(safe-area-inset-top))] sm:pt-[calc(9.5rem+env(safe-area-inset-top))]">
         <div className="w-full max-w-[390px] space-y-4 sm:max-w-xl sm:space-y-5">
           <h1 className="text-[50px] font-extrabold leading-[0.96] tracking-tight text-white sm:text-[62px] lg:text-[68px]">
             <motion.span

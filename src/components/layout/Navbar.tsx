@@ -159,14 +159,14 @@ function Navbar() {
         initial={shouldReduceMotion ? undefined : { y: -60, opacity: 0 }}
         animate={shouldReduceMotion ? undefined : { y: 0, opacity: 1 }}
         transition={{ duration: animationDuration.base, ease: animationEase }}
-        className="sticky top-3 z-50 hidden sm:block pb-4"
+        className="sticky top-4 z-50 hidden sm:block pb-6"
       >
         <Container
           className={[
             'flex h-[72px] items-center justify-between gap-4 rounded-2xl px-5 transition-[background-color,backdrop-filter,box-shadow,border-color,transform] duration-300',
             isScrolled
               ? 'glass-header translate-y-0'
-              : 'border border-transparent bg-transparent shadow-none backdrop-blur-0',
+              : 'border border-white/10 bg-[#0f2742]/40 shadow-[0_8px_22px_rgba(2,10,24,0.26)] backdrop-blur-[10px]',
           ].join(' ')}
         >
           <a href="#home" className="flex shrink-0 items-center gap-3 text-white">

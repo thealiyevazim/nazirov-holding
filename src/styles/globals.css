@@ -44,9 +44,9 @@
 @layer components {
   .glass-header {
     background:
-      linear-gradient(180deg, rgba(16, 34, 54, 0.72), rgba(11, 28, 45, 0.64)),
-      linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.03));
-    border: 1px solid rgba(255, 255, 255, 0.12);
+      linear-gradient(180deg, rgba(16, 34, 54, 0.84), rgba(11, 28, 45, 0.76)),
+      linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.06));
+    border: 1px solid rgba(255, 255, 255, 0.16);
     border-bottom-color: rgba(255, 255, 255, 0.03);
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.2),
@@ -57,9 +57,9 @@
 
   .glass-panel {
     background:
-      linear-gradient(135deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.08)),
-      linear-gradient(160deg, rgba(132, 170, 255, 0.14), rgba(50, 88, 184, 0.08));
-    border: 1px solid rgba(255, 255, 255, 0.26);
+      linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.12)),
+      linear-gradient(160deg, rgba(132, 170, 255, 0.18), rgba(50, 88, 184, 0.11));
+    border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.45),
       inset 0 -1px 0 rgba(255, 255, 255, 0.06),
@@ -70,9 +70,9 @@
 
   .glass-pill {
     background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.08)),
-      rgba(108, 143, 225, 0.24);
-    border: 1px solid rgba(255, 255, 255, 0.22);
+      linear-gradient(180deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.12)),
+      rgba(108, 143, 225, 0.32);
+    border: 1px solid rgba(255, 255, 255, 0.26);
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.36),
       0 8px 22px rgba(5, 14, 32, 0.38);
@@ -82,9 +82,9 @@
 
   .glass-mobile-tab {
     background:
-      linear-gradient(180deg, rgba(119, 161, 244, 0.36), rgba(76, 116, 194, 0.3)),
-      linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.04));
-    border: 1px solid rgba(255, 255, 255, 0.24);
+      linear-gradient(180deg, rgba(119, 161, 244, 0.44), rgba(76, 116, 194, 0.36)),
+      linear-gradient(145deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.08));
+    border: 1px solid rgba(255, 255, 255, 0.28);
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.32),
       inset 0 -1px 0 rgba(255, 255, 255, 0.06),
@@ -101,6 +101,28 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+  }
+
+  @supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+    .glass-header {
+      background: rgba(10, 24, 40, 0.92);
+      border-color: rgba(255, 255, 255, 0.16);
+    }
+
+    .glass-panel {
+      background: rgba(22, 44, 76, 0.9);
+      border-color: rgba(255, 255, 255, 0.24);
+    }
+
+    .glass-pill {
+      background: rgba(56, 88, 140, 0.88);
+      border-color: rgba(255, 255, 255, 0.24);
+    }
+
+    .glass-mobile-tab {
+      background: rgba(38, 67, 112, 0.92);
+      border-color: rgba(255, 255, 255, 0.22);
+    }
   }
 
 /* Splash Screen */
