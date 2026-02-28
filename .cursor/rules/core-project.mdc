@@ -1,0 +1,17 @@
+---
+description: Core standards for code quality, architecture, and accessibility
+alwaysApply: true
+---
+
+# Core Project Standards
+
+- Build simple, strong features: prefer clarity and maintainability over cleverness.
+- Keep modules focused and small; extract reusable logic instead of duplicating it.
+- Do not ship dead code, unused imports, or commented-out implementation blocks.
+- Preserve predictable Vite + React structure; avoid ad-hoc folder patterns.
+- Use semantic HTML first and keep keyboard navigation/focus behavior correct.
+- Treat accessibility as a baseline requirement, not a later enhancement.
+- Default to composition over inheritance for UI and state flow.
+- Prefer explicit naming for functions, props, and state to reduce ambiguity.
+- Add concise comments only for non-obvious logic or trade-off decisions.
+- When changing behavior, include or update tests for critical user flows.

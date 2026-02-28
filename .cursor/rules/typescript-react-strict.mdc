@@ -1,0 +1,26 @@
+---
+description: Strict TypeScript and React conventions for robust typed code
+globs: **/*.{ts,tsx}
+alwaysApply: false
+---
+
+# TypeScript + React Strictness
+
+- Avoid `any`. Use precise types, generics, discriminated unions, or `unknown` with narrowing.
+- Define explicit types for exported functions, hooks, components, and shared utilities.
+- Keep component props fully typed; avoid implicit `children` contracts.
+- Type all event handlers (`ChangeEvent`, `MouseEvent`, `FormEvent`) explicitly.
+- Model async states with typed unions (`idle | loading | success | error`) and handle all branches.
+- Avoid `!` non-null assertions unless there is an inline justification comment.
+- Use runtime validation at API boundaries when external data enters the app.
+- Prefer immutable updates and pure helpers for predictable state changes.
+- Do not silence TypeScript or ESLint errors without a short reason and a follow-up plan.
+
+```tsx
+// Good: explicit API and exhaustive state handling.
+type UserState =
+  | { status: 'idle' }
+  | { status: 'loading' }
+  | { status: 'success'; data: User[] }
+  | { status: 'error'; message: string };
+```

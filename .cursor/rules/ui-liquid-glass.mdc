@@ -1,0 +1,26 @@
+---
+description: Strong simple UI system with restrained liquid-glass effects
+globs: **/*.{tsx,css,scss}
+alwaysApply: false
+---
+
+# UI Design: Strong Simple Liquid Glass
+
+- Keep layouts clean and readable: prioritize spacing, hierarchy, and alignment over decoration.
+- Use a small token system for spacing, radius, shadow, and typography; avoid one-off values.
+- Liquid-glass effects must be subtle: limited blur, controlled transparency, and clear contrast.
+- Ensure foreground text remains readable on translucent surfaces in all states.
+- Reuse shared UI primitives (`GlassCard`, `GlassButton`, `GlassPanel`) before creating variants.
+- Keep interactive controls visually obvious with clear hover, focus, and active states.
+- Avoid stacking many blur/transparency layers that reduce performance or legibility.
+- Provide graceful fallback styles when `backdrop-filter` is unsupported.
+- Prefer smooth, short transitions that support usability and do not distract.
+
+```css
+/* Example direction: restrained, readable glass surface */
+.glass-surface {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+```
